@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #3488fa;
+  --gray-80: #818b9d;
+  --default-padding: 10px 19px;
+  --default-radius: 8px;
+  --border-gray: #b9c3d4;
+  --default-gray: #f4f7fa;
+  --gray-90: #222222;
+  --body-font: 15px;
+}

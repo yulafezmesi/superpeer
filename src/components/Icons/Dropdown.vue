@@ -1,0 +1,88 @@
+<template>
+  <div class="circle" v-if="circle">
+    <svg
+      :width="width"
+      :height="height"
+      :viewBox="viewBox"
+      :fill="iconColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.00002 12.75C8.62052 12.75 8.25752 12.5752 8.00552 12.2685L4.84577 8.445C4.46777 7.98675 4.39202 7.3365 4.65152 6.78675C4.88027 6.3015 5.33552 6 5.84027 6H12.1598C12.6645 6 13.1198 6.3015 13.3485 6.78675C13.608 7.3365 13.5323 7.98675 13.155 8.44425L9.99452 12.2685C9.74252 12.5752 9.37952 12.75 9.00002 12.75Z"
+      />
+      <mask
+        id="mask0"
+        mask-type="alpha"
+        maskUnits="userSpaceOnUse"
+        x="4"
+        y="6"
+        width="10"
+        height="7"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.00002 12.75C8.62052 12.75 8.25752 12.5752 8.00552 12.2685L4.84577 8.445C4.46777 7.98675 4.39202 7.3365 4.65152 6.78675C4.88027 6.3015 5.33552 6 5.84027 6H12.1598C12.6645 6 13.1198 6.3015 13.3485 6.78675C13.608 7.3365 13.5323 7.98675 13.155 8.44425L9.99452 12.2685C9.74252 12.5752 9.37952 12.75 9.00002 12.75Z"
+          fill="white"
+        />
+      </mask>
+      <g mask="url(#mask0)" />
+    </svg>
+  </div>
+  <svg
+    v-else
+    :width="width"
+    :height="height"
+    :viewBox="viewBox"
+    :fill="iconColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M9.00002 12.75C8.62052 12.75 8.25752 12.5752 8.00552 12.2685L4.84577 8.445C4.46777 7.98675 4.39202 7.3365 4.65152 6.78675C4.88027 6.3015 5.33552 6 5.84027 6H12.1598C12.6645 6 13.1198 6.3015 13.3485 6.78675C13.608 7.3365 13.5323 7.98675 13.155 8.44425L9.99452 12.2685C9.74252 12.5752 9.37952 12.75 9.00002 12.75Z"
+    />
+    <mask
+      id="mask0"
+      mask-type="alpha"
+      maskUnits="userSpaceOnUse"
+      x="4"
+      y="6"
+      width="10"
+      height="7"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.00002 12.75C8.62052 12.75 8.25752 12.5752 8.00552 12.2685L4.84577 8.445C4.46777 7.98675 4.39202 7.3365 4.65152 6.78675C4.88027 6.3015 5.33552 6 5.84027 6H12.1598C12.6645 6 13.1198 6.3015 13.3485 6.78675C13.608 7.3365 13.5323 7.98675 13.155 8.44425L9.99452 12.2685C9.74252 12.5752 9.37952 12.75 9.00002 12.75Z"
+        fill="white"
+      />
+    </mask>
+    <g mask="url(#mask0)" />
+  </svg>
+</template>
+<script>
+export default {
+  props: {
+    viewBox: { type: String, default: "0 0 18 18" },
+    width: { type: [Number, String], default: 18 },
+    height: { type: [Number, String], default: 18 },
+    iconColor: { type: String, default: "#222222" },
+    circle: { type: Boolean, default: false },
+  },
+};
+</script>
+
+<style scoped>
+.circle {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  background-color: var(--default-gray);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+</style>
